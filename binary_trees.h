@@ -89,4 +89,7 @@ size_t binary_tree_nodes(const binary_tree_t *tree);
 
 /* 14-binary_tree_balance.c */
 int binary_tree_balance(const binary_tree_t *tree);
+int get_binary_tree_height(const binary_tree_t *tree);
+
+
 #endif /* BINARY_TREE_H */
