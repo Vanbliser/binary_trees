@@ -22,7 +22,6 @@ struct binary_tree_s
 };
 
 
-
 /* CUSTOM TYPES */
 
 /* Basic Binary Tree */
@@ -39,11 +38,6 @@ typedef struct binary_tree_s heap_t;
 
 
 /* FUNCTION PROTOTYPES */
-
-/* binary_tree_print.c */
-int print_t(const binary_tree_t *tree, int offset, int depth, char **s);
-size_t _height(const binary_tree_t *tree);
-void binary_tree_print(const binary_tree_t *tree);
 
 /* 0-binary_tree_node.c */
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
@@ -89,4 +83,19 @@ size_t binary_tree_nodes(const binary_tree_t *tree);
 
 /* 14-binary_tree_balance.c */
 int binary_tree_balance(const binary_tree_t *tree);
+int get_binary_tree_height(const binary_tree_t *tree);
+
+/* 15-binary_tree_is_full.c */
+int binary_tree_is_full(const binary_tree_t *tree);
+
+/* 16-binary_tree_is_perfect.c */
+int binary_tree_is_perfect(const binary_tree_t *tree);
+size_t binary_tree_height(const binary_tree_t *tree);
+
+/* 17-binary_tree_sibling.c */
+binary_tree_t *binary_tree_sibling(binary_tree_t *node);
+
+/* 18-binary_tree_uncle.c */
+binary_tree_t *binary_tree_uncle(binary_tree_t *node);
+
 #endif /* BINARY_TREE_H */

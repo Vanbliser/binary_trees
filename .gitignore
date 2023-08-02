@@ -1,6 +1,16 @@
 .gitignore.*
 
+# Exclude files without extension but include the AUTHORS FILE
+*
+!/**/
+!*.*
+!AUTHORS
+
+# Exclude project test files
 *main.c
+binary_tree_print.c
+
+>>>>>>> 4b36cd39f679a99ebb557117dbfdcea6406bced3
 # Prerequisites
 *.d
 
