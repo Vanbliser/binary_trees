@@ -22,7 +22,6 @@ struct binary_tree_s
 };
 
 
-
 /* CUSTOM TYPES */
 
 /* Basic Binary Tree */
