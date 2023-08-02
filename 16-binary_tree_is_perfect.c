@@ -26,7 +26,11 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 			return (1);
 		return (1);
 	}
+<<<<<<< HEAD
 	return (binary_tree_is_perfect(tree->left) && (binary_tree_is_perfect(tree->right)));
+=======
+	return (0);
+>>>>>>> 2bbef95a58e6d6034b7cff4e8a42d06c878d846c
 }
 
 
