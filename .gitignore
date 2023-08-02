@@ -1,4 +1,9 @@
-.gitignore.*
+# Exclude files without extension but include the AUTHORS FILE
+*
+!/**/
+!*.*
+!AUTHORS
+
 # Prerequisites
 *.d
 
