@@ -37,7 +37,7 @@ int is_sorted_list_no_duplicate(list_t *head)
 	{
 		while (head->next)
 		{
-			if (head->n > head->next->n)
+			if (head->n >= head->next->n)
 				return (0);
 			head = head->next;
 		}

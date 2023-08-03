@@ -27,7 +27,7 @@ int main(void)
 	appendtolist(&list, 1);
 	appendtolist(&list, 2);
 	appendtolist(&list, 3);
-	appendtolist(&list, 4);
+	appendtolist(&list, 3);
 	appendtolist(&list, 5);
 	appendtolist(&list, 6);
 	print_list(list);
