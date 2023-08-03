@@ -1,8 +1,8 @@
 #ifndef BINARY_TREE_H
 #define BINARY_TREE_H
 
+
 #include <stdlib.h>
-#include <stdio.h>
 
 
 /* Data structures */
@@ -145,6 +145,9 @@ void free_list(list_t *head);
 
 /* 111-bst_insert.c */
 bst_t *bst_insert(bst_t **tree, int value);
+
+/* 112-array_to_bst.c */
+bst_t *array_to_bst(int *array, size_t size);
 
 /* 120-binary_tree_is_avl.c */
 avl_t *avl_insert(avl_t **tree, int value);
