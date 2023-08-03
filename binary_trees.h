@@ -141,4 +141,10 @@ int binary_tree_is_complete(const binary_tree_t *tree);
 int check_complete(const binary_tree_t *tree, unsigned int index, size_t size);
 size_t n_nodes(const binary_tree_t *tree);
 
+/* 103-binary_tree_rotate_left.c */
+binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
+
+/* 104-binary_tree_rotate_right.c */
+binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);
+
 #endif /* BINARY_TREE_H */
