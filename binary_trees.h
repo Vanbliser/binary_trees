@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+
 /* Data structures */
 
 /**
@@ -119,6 +120,7 @@ binary_tree_t *binary_tree_sibling(binary_tree_t *node);
 binary_tree_t *binary_tree_uncle(binary_tree_t *node);
 
 
+
 /* 100-binary_trees_ancestor.c */
 binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tree_t *second);
 
@@ -136,6 +138,7 @@ void convert_to_list_inorder(const binary_tree_t *tree, list_t **list);
 void appendtolist(list_t **head, int n);
 void free_list(list_t *head);
 
+
 /* 102-binary_tree_is_complete.c */
 int binary_tree_is_complete(const binary_tree_t *tree);
 int check_complete(const binary_tree_t *tree, unsigned int index, size_t size);
@@ -146,5 +149,6 @@ binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
 
 /* 104-binary_tree_rotate_right.c */
 binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);
+
 
 #endif /* BINARY_TREE_H */
