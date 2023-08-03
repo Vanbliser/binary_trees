@@ -2,6 +2,7 @@
 #define BINARY_TREE_H
 
 #include <stdlib.h>
+#include <stdio.h>
 
 
 /* Data structures */
@@ -54,7 +55,6 @@ typedef struct list_s list_t;
 
 
 /* FUNCTION PROTOTYPES */
-
 
 /* 0-binary_tree_node.c */
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
@@ -115,6 +115,26 @@ binary_tree_t *binary_tree_sibling(binary_tree_t *node);
 /* 18-binary_tree_uncle.c */
 binary_tree_t *binary_tree_uncle(binary_tree_t *node);
 
+/* 100-binary_trees_ancestor.c */
+binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tree_t *second);
+
+/* 101-binary_tree_levelorder.c */
+void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
+int max(int, int);
+void print_tree(const binary_tree_t *tree, void (*func)(int), size_t level);
+size_t measure(const binary_tree_t *tree);
+
+/* 102-binary_tree_is_complete.c */
+int binary_tree_is_complete(const binary_tree_t *tree);
+int check_complete(const binary_tree_t *tree, unsigned int index, size_t size);
+size_t n_nodes(const binary_tree_t *tree);
+
+/* 103-binary_tree_rotate_left.c */
+binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
+
+/* 104-binary_tree_rotate_right.c */
+binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);
+
 /* 110-binary_tree_is_bst.c */
 int binary_tree_is_bst(const binary_tree_t *tree);
 int is_sorted_list_no_duplicate(list_t *head);
@@ -124,5 +144,8 @@ void free_list(list_t *head);
 
 /* 111-bst_insert.c */
 bst_t *bst_insert(bst_t **tree, int value);
+
+/* 120-binary_tree_is_avl.c */
+avl_t *avl_insert(avl_t **tree, int value);
 
 #endif /* BINARY_TREE_H */
