@@ -147,4 +147,6 @@ binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
 /* 104-binary_tree_rotate_right.c */
 binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);
 
+/* 120-binary_tree_is_avl.c */
+avl_t *avl_insert(avl_t **tree, int value);
 #endif /* BINARY_TREE_H */
