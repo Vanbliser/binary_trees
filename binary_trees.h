@@ -55,10 +55,6 @@ typedef struct list_s list_t;
 
 /* FUNCTION PROTOTYPES */
 
-/* binary_tree_print.c */
-void binary_tree_print(const binary_tree_t *tree);
-
-
 /* 0-binary_tree_node.c */
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
 
@@ -128,14 +124,6 @@ int max(int, int);
 void print_tree(const binary_tree_t *tree, void (*func)(int), size_t level);
 size_t measure(const binary_tree_t *tree);
 
-
-/* 110-binary_tree_is_bst.c */
-int binary_tree_is_bst(const binary_tree_t *tree);
-int is_sorted_list_no_duplicate(list_t *head);
-void convert_to_list_inorder(const binary_tree_t *tree, list_t **list);
-void appendtolist(list_t **head, int n);
-void free_list(list_t *head);
-
 /* 102-binary_tree_is_complete.c */
 int binary_tree_is_complete(const binary_tree_t *tree);
 int check_complete(const binary_tree_t *tree, unsigned int index, size_t size);
@@ -147,6 +135,14 @@ binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
 /* 104-binary_tree_rotate_right.c */
 binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);
 
+/* 110-binary_tree_is_bst.c */
+int binary_tree_is_bst(const binary_tree_t *tree);
+int is_sorted_list_no_duplicate(list_t *head);
+void convert_to_list_inorder(const binary_tree_t *tree, list_t **list);
+void appendtolist(list_t **head, int n);
+void free_list(list_t *head);
+
 /* 120-binary_tree_is_avl.c */
 avl_t *avl_insert(avl_t **tree, int value);
+
 #endif /* BINARY_TREE_H */
