@@ -126,4 +126,7 @@ void convert_to_list_inorder(const binary_tree_t *tree, list_t **list);
 void appendtolist(list_t **head, int n);
 void free_list(list_t *head);
 
+/* 111-bst_insert.c */
+bst_t *bst_insert(bst_t **tree, int value);
+
 #endif /* BINARY_TREE_H */
