@@ -28,26 +28,19 @@ bst_t *bst_insert(bst_t **tree, int value)
 			else
 				current = current->right;
 		}
-		new = malloc(sizeof(bst_t));
-		if (new)
+		new = binary_tree_node(parent, value);
+		if (parent)
 		{
-			new->n = value;
-			new->parent = parent;
-			new->left = NULL;
-			new->right = NULL;
-			if (parent)
-			{
-				if (new->n < parent->n)
-					parent->left = new;
-				else
-					parent->right = new;
-			}
+			if (new->n < parent->n)
+				parent->left = new;
 			else
-			{
-				*tree = new;
-			}
-			return (new);
+				parent->right = new;
 		}
+		else
+		{
+			*tree = new;
+		}
+		return (new);
 	}
 	return (NULL);
 }
