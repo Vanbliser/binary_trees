@@ -4,6 +4,10 @@
 !*.*
 !AUTHORS
 
+# Exclude project test files
+*main.c
+binary_tree_print.c
+
 # Prerequisites
 *.d
 
