@@ -2,6 +2,7 @@
 #define BINARY_TREE_H
 
 #include <stdlib.h>
+#include <stdio.h>
 
 /* Data structures */
 
@@ -21,6 +22,18 @@ struct binary_tree_s
 	struct binary_tree_s *right;
 };
 
+/**
+ * struct list_s - singly linked list of int node
+ *
+ * @n: integer value
+ * @next: pointer to the next node
+ */
+struct list_s
+{
+	int n;
+	struct list_s *next;
+};
+
 
 /* CUSTOM TYPES */
 
@@ -35,6 +48,9 @@ typedef struct binary_tree_s avl_t;
 
 /* Max Binary Heap */
 typedef struct binary_tree_s heap_t;
+
+/* List of int */
+typedef struct list_s list_t;
 
 
 /* FUNCTION PROTOTYPES */
@@ -109,4 +125,20 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tr
 /* 101-binary_tree_levelorder.c */
 void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
 int max(int, int);
+void print_tree(const binary_tree_t *tree, void (*func)(int), size_t level);
+size_t measure(const binary_tree_t *tree);
+
+
+/* 110-binary_tree_is_bst.c */
+int binary_tree_is_bst(const binary_tree_t *tree);
+int is_sorted_list_no_duplicate(list_t *head);
+void convert_to_list_inorder(const binary_tree_t *tree, list_t **list);
+void appendtolist(list_t **head, int n);
+void free_list(list_t *head);
+
+/* 102-binary_tree_is_complete.c */
+int binary_tree_is_complete(const binary_tree_t *tree);
+int check_complete(const binary_tree_t *tree, unsigned int index, size_t size);
+size_t n_nodes(const binary_tree_t *tree);
+
 #endif /* BINARY_TREE_H */
