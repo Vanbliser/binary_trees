@@ -55,6 +55,7 @@ typedef struct list_s list_t;
 
 /* FUNCTION PROTOTYPES */
 
+
 /* 0-binary_tree_node.c */
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
 
@@ -120,5 +121,8 @@ int is_sorted_list_no_duplicate(list_t *head);
 void convert_to_list_inorder(const binary_tree_t *tree, list_t **list);
 void appendtolist(list_t **head, int n);
 void free_list(list_t *head);
+
+/* 111-bst_insert.c */
+bst_t *bst_insert(bst_t **tree, int value);
 
 #endif /* BINARY_TREE_H */
