@@ -3,6 +3,7 @@
 
 #include <stdlib.h>
 
+
 /* Data structures */
 
 /**
@@ -21,6 +22,18 @@ struct binary_tree_s
 	struct binary_tree_s *right;
 };
 
+/**
+ * struct list_s - singly linked list of int node
+ *
+ * @n: integer value
+ * @next: pointer to the next node
+ */
+struct list_s
+{
+	int n;
+	struct list_s *next;
+};
+
 
 /* CUSTOM TYPES */
 
@@ -35,6 +48,9 @@ typedef struct binary_tree_s avl_t;
 
 /* Max Binary Heap */
 typedef struct binary_tree_s heap_t;
+
+/* List of int */
+typedef struct list_s list_t;
 
 
 /* FUNCTION PROTOTYPES */
@@ -97,5 +113,12 @@ binary_tree_t *binary_tree_sibling(binary_tree_t *node);
 
 /* 18-binary_tree_uncle.c */
 binary_tree_t *binary_tree_uncle(binary_tree_t *node);
+
+/* 110-binary_tree_is_bst.c */
+int binary_tree_is_bst(const binary_tree_t *tree);
+int is_sorted_list_no_duplicate(list_t *head);
+void convert_to_list_inorder(const binary_tree_t *tree, list_t **list);
+void appendtolist(list_t **head, int n);
+void free_list(list_t *head);
 
 #endif /* BINARY_TREE_H */
