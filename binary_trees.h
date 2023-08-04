@@ -123,6 +123,7 @@ binary_tree_t *binary_tree_uncle(binary_tree_t *node);
 /* 100-binary_trees_ancestor.c */
 binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 		const binary_tree_t *second);
+binary_tree_t *find_parent(binary_tree_t *node, size_t nth);
 
 /* 101-binary_tree_levelorder.c */
 void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
@@ -156,6 +157,9 @@ bst_t *array_to_bst(int *array, size_t size);
 
 /* 113-bst_search.c */
 bst_t *bst_search(const bst_t *tree, int value);
+
+/* 114-bst_remove.c */
+bst_t *bst_remove(bst_t *root, int value);
 
 /* 120-binary_tree_is_avl.c */
 avl_t *avl_insert(avl_t **tree, int value);
