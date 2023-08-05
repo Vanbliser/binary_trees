@@ -22,7 +22,19 @@ bst_t *bst_remove(bst_t *root, int value)
 		if (node)
 		{
 			replace = replace_node(node);
-			node->n = replace->n;
+			if (node == replace)
+			{
+				if (node == root)
+					root = NULL;
+			}
+			else
+			{
+				node->n = replace->n;
+				if (replace->left)
+					node->left = replace->left;
+				if (replace->right)
+					node->right = replace->right;
+			}
 			if (replace->parent)
 			{
 				if (replace == replace->parent->left)
