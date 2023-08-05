@@ -3,6 +3,7 @@
 !/**/
 !*.*
 !AUTHORS
+!115-0
 
 # Exclude project test files
 *main.c
