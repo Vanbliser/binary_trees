@@ -153,6 +153,11 @@ bst_t *array_to_bst(int *array, size_t size);
 /* 113-bst_search.c */
 bst_t *bst_search(const bst_t *tree, int value);
 
+/* 114-bst_remove.c */
+bst_t *bst_remove(bst_t *root, int value);
+bst_t *replace_node(const bst_t *node);
+bst_t *bst_search(const bst_t *tree, int value);
+
 /* 120-binary_tree_is_avl.c */
 avl_t *avl_insert(avl_t **tree, int value);
 
