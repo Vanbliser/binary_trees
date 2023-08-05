@@ -1,5 +1,5 @@
 #include "binary_trees.h"
-#include <stdio.h>
+
 
 /**
  * bst_remove - a function that removes a node from a Binary Search Tree
@@ -12,7 +12,6 @@
  * Return: return a pointer to the new root node of the tree after removing the
  * desired value.
  */
-
 bst_t *bst_remove(bst_t *root, int value)
 {
 	bst_t *node, *replace;
@@ -22,50 +21,19 @@ bst_t *bst_remove(bst_t *root, int value)
 		node = bst_search((const bst_t *)root, value);
 		if (node)
 		{
-			printf("\nSTART\n\n");
-			binary_tree_print(root);
 			replace = replace_node(node);
-			printf("1: root=%d, node=%d, replace=%d\n", root->n, node->n, replace->n);
-			binary_tree_print(root);
-			/* redirect nodes->children->parent to replace if they exist */
-			if (node->left)
-				node->left->parent = replace;
-			if (node->right)
-				node->right->parent = replace;
-			printf("2\n");
-			binary_tree_print(root);
-			/* equate replace->children to nodes->children */
-			replace->left = node->left;
-			replace->right = node->right;
-			replace->parent = node->parent;
-			printf("3\n");
-			binary_tree_print(root);
-			/* point replace->parent->children to NULL, if they exist */
+			node->n = replace->n;
 			if (replace->parent)
 			{
 				if (replace == replace->parent->left)
 					replace->parent->left = NULL;
-				else
+				if (replace == replace->parent->right)
 					replace->parent->right = NULL;
 			}
-			printf("4\n");
-			binary_tree_print(root);
-			if (node == root && node != replace)
-				root = replace;
-			if (node == root && node == replace)
-				root = NULL;
-			printf("5\n");
-			binary_tree_print(root);
-			printf("6\n");
-			binary_tree_print(root);
-			printf("root=%d, left=%d, right=%d\n", root->n, root->left->n, root->right->n);
-			binary_tree_print(root);
-			free(node);
-			printf("\n\nSTOP\n");
-			return (root);
+			free(replace);
 		}
 	}
-	return (NULL);
+	return (root);
 }
 
 /**

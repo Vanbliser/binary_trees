@@ -8,8 +8,8 @@
  */
 int main(void)
 {
-	int node, replace;
-    bst_t *tree, *r_node;
+	/*int node, replace;*/
+    bst_t *tree; /*, *r_node*/
     int array[] = {
         79, 47, 68, 87, 84, 91, 21, 32, 34, 2,
         20, 22, 98, 1, 62, 95
@@ -20,50 +20,62 @@ int main(void)
     if (!tree)
         return (1);
     binary_tree_print(tree);
-
+/*
 	printf("\n\n==========================================\n\n");
 
 	node = 87;
 	r_node = replace_node(bst_search(tree, node));
 	replace = r_node->n;
 	printf("The replace node for %d is %d\n", node, replace);
-	printf("==========================================\n\n");
+	printf("==========================================\n");
 
 	node = 84;
 	r_node = replace_node(bst_search(tree, node));
 	replace = r_node->n;
 	printf("The replace node for %d is %d\n", node, replace);
-	printf("==========================================\n\n");
+	printf("==========================================\n");
 
 	node = 68;
 	r_node = replace_node(bst_search(tree, node));
 	replace = r_node->n;
 	printf("The replace node for %d is %d\n", node, replace);
-	printf("==========================================\n\n");
+	printf("==========================================\n");
 
 	node = 32;
 	r_node = replace_node(bst_search(tree, node));
 	replace = r_node->n;
 	printf("The replace node for %d is %d\n", node, replace);
-	printf("==========================================\n\n");
+	printf("==========================================\n");
 
 	node = 21;
 	r_node = replace_node(bst_search(tree, node));
 	replace = r_node->n;
 	printf("The replace node for %d is %d\n", node, replace);
-	printf("==========================================\n\n");
+	printf("==========================================\n");
 
 	node = 79;
 	r_node = replace_node(bst_search(tree, node));
 	replace = r_node->n;
 	printf("The replace node for %d is %d\n", node, replace);
-	printf("==========================================\n\n");
+	printf("==========================================\n");
 
 	node = 47;
 	r_node = replace_node(bst_search(tree, node));
 	replace = r_node->n;
 	printf("The replace node for %d is %d\n", node, replace);
-	printf("==========================================\n\n");
+	printf("==========================================\n");
+*/
+	tree = bst_remove(tree, 47);
+    binary_tree_print(tree);
+
+	tree = bst_remove(tree, 79);
+    binary_tree_print(tree);
+
+	tree = bst_remove(tree, 21);
+    binary_tree_print(tree);
+
+	tree = bst_remove(tree, 32);
+    binary_tree_print(tree);
 
 	return (0);
 }
