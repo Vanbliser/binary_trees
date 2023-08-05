@@ -24,8 +24,8 @@ bst_t *bst_remove(bst_t *root, int value)
 			replace = replace_node(node);
 			if (node == replace)
 			{
-				if (node == root);
-					root == NULL;
+				if (node == root)
+					root = NULL;
 			}
 			else
 			{
